@@ -1,0 +1,13 @@
+---
+title: "20240912_Practice"
+output: html_document
+date: "2024-09-12"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+usethis::use_git_config(user.name = "XiaoniXu", user.email = "xx2485@cumc.columbia.edu")
+```
