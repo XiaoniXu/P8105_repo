@@ -2,7 +2,8 @@
 title: "Basic Plots"
 author: "Xiaoni Xu"
 date: 2024-09-12
-output: html_document
+output: github_document
+# was 'html_document'
 ---
 
 ```{r setup, include = FALSE}
