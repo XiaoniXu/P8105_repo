@@ -1,13 +1,35 @@
 ---
-title: "20240912_Practice"
+title: "Basic Plots"
+author: "Xiaoni Xu"
+date: 2024-09-12
 output: html_document
-date: "2024-09-12"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE}
+library(tidyverse)
 ```
 
-```{r}
-usethis::use_git_config(user.name = "XiaoniXu", user.email = "xx2485@cumc.columbia.edu")
+The purpose of this file is to present a couple of basic plots using `ggplot`.
+
+First we create a dataframe containing variables for our plots.
+
+```{r df_create}
+set.seed(1234)
+
+plot_df = tibble(
+  x = rnorm(1000, sd = .5),
+  y = 1 + 2 * x + rnorm(1000)
+)
+```
+
+First we show a histogram of the `x` variable.
+
+```{r x_hist}
+ggplot(plot_df, aes(x = x)) + geom_histogram()
+```
+
+Next we show a scatterplot of `y` vs `x`. 
+
+```{r yx_scatter}
+ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 ```
